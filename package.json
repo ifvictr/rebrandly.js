@@ -1,0 +1,29 @@
+{
+    "name": "rebrandly",
+    "version": "1.0.0",
+    "description": "A promise-based client for the Rebrandly API in Node.js.",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/ifvictr/rebrandly.git"
+    },
+    "keywords": [
+        "api",
+        "branding",
+        "link",
+        "rebrandly"
+    ],
+    "author": "Victor Truong <me@ifvictr.com> (https://ifvictr.com)",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/ifvictr/rebrandly/issues"
+    },
+    "homepage": "https://github.com/ifvictr/rebrandly#readme",
+    "dependencies": {
+        "bluebird": "^3.5.0",
+        "request": "^2.82.0"
+    }
+}
