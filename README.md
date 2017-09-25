@@ -7,13 +7,13 @@ npm install rebrandly --save
 ```
 
 ## Usage
-```
+```js
 const Rebrandly = require("./");
 const client = new Rebrandly("TOKEN GOES HERE");
 
 // Output all shortlinks and the destinations they point to
 client.links.list().then(res => {
-    for(let link of res) {
+    for(const link of res) {
         console.log(`${link.domainName}/${link.slashtag} -> ${link.destination}`);
     }
 });
