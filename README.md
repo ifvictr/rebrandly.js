@@ -8,8 +8,8 @@ npm install rebrandly --save
 
 ## Usage
 ```js
-const Rebrandly = require("./");
-const client = new Rebrandly("TOKEN GOES HERE");
+const Rebrandly = require("rebrandly");
+const client = new Rebrandly("TOKEN");
 
 // Output all shortlinks and the destinations they point to
 client.links.list().then(res => {
