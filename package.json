@@ -4,7 +4,7 @@
     "description": "A promise-based client for the Rebrandly API in Node.js.",
     "main": "index.js",
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "test": "ava --verbose"
     },
     "repository": {
         "type": "git",
@@ -25,5 +25,8 @@
     "dependencies": {
         "bluebird": "^3.5.0",
         "request": "^2.82.0"
+    },
+    "devDependencies": {
+        "ava": "^0.22.0"
     }
 }
