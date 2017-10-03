@@ -4,7 +4,7 @@
     "description": "A promise-based client for the Rebrandly API in Node.js.",
     "main": "index.js",
     "scripts": {
-        "test": "ava --verbose"
+        "test": "nyc --reporter=lcov ava --verbose"
     },
     "repository": {
         "type": "git",
@@ -27,6 +27,8 @@
         "request": "^2.82.0"
     },
     "devDependencies": {
-        "ava": "^0.22.0"
+        "ava": "^0.22.0",
+        "nyc": "^11.2.1",
+        "sinon": "^4.0.0"
     }
 }
