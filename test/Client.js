@@ -1,6 +1,5 @@
-import test from "ava";
-import sinon from "sinon";
-
+const test = require("ava");
+const sinon = require("sinon");
 const Account = require("../src/Account");
 const Domain = require("../src/Domain");
 const Link = require("../src/Link");
