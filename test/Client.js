@@ -1,5 +1,6 @@
 const test = require("ava");
 const sinon = require("sinon");
+
 const Account = require("../src/Account");
 const Domain = require("../src/Domain");
 const Link = require("../src/Link");
@@ -8,7 +9,7 @@ const Tag = require("../src/Tag");
 const Client = require("../src/Client");
 
 /**
- * constructor
+ * Constructor
  */
 test("Client constructor sets and stores the API key", t => {
     const client = new Client("thisIsAnAPIKey");
@@ -53,53 +54,53 @@ test("Client constructor instantiates Tag class", t => {
 });
 
 /**
- * delete
+ * DELETE
  */
-test("Client delete function should call _request with uri and data endpoints", t => {
+test("Client#delete should call _request with uri and data endpoints", t => {
     const requestSpy = sinon.spy(Client.prototype, "_request");
     const client = new Client("thisIsAnAPIKey");
 
     t.false(requestSpy.called);
-    client.delete("test/delete/endpoint", { foo: "foo", bar: "bar" })
-    t.true(requestSpy.calledWith("delete", "test/delete/endpoint", { foo: "foo", bar: "bar" }));
+    client.delete("test/delete/endpoint", {foo: "foo", bar: "bar"});
+    t.true(requestSpy.calledWith("delete", "test/delete/endpoint", {foo: "foo", bar: "bar"}));
     Client.prototype._request.restore();
 });
 
 /**
- * get
+ * GET
  */
-test("Client get function should call _request with uri and data endpoints", t => {
+test("Client#get should call _request with uri and data endpoints", t => {
     const requestSpy = sinon.spy(Client.prototype, "_request");
     const client = new Client("thisIsAnAPIKey");
 
     t.false(requestSpy.called);
-    client.get("test/get/endpoint", { foo: "foo", bar: "bar" })
-    t.true(requestSpy.calledWith("get", "test/get/endpoint", { foo: "foo", bar: "bar" }));
+    client.get("test/get/endpoint", {foo: "foo", bar: "bar"});
+    t.true(requestSpy.calledWith("get", "test/get/endpoint", {foo: "foo", bar: "bar"}));
     Client.prototype._request.restore();
 });
 
 /**
- * post
+ * POST
  */
-test("Client post function should call _request with uri and data endpoints", t => {
+test("Client#post should call _request with uri and data endpoints", t => {
     const requestSpy = sinon.spy(Client.prototype, "_request");
     const client = new Client("thisIsAnAPIKey");
 
     t.false(requestSpy.called);
-    client.post("test/post/endpoint", { foo: "foo", bar: "bar" })
-    t.true(requestSpy.calledWith("post", "test/post/endpoint", { foo: "foo", bar: "bar" }));
+    client.post("test/post/endpoint", {foo: "foo", bar: "bar"});
+    t.true(requestSpy.calledWith("post", "test/post/endpoint", {foo: "foo", bar: "bar"}));
     Client.prototype._request.restore();
 });
 
 /**
- * put
+ * PUT
  */
-test("Client put function should call _request with uri and data endpoints", t => {
+test("Client#put should call _request with uri and data endpoints", t => {
     const requestSpy = sinon.spy(Client.prototype, "_request");
     const client = new Client("thisIsAnAPIKey");
 
     t.false(requestSpy.called);
-    client.put("test/put/endpoint", { foo: "foo", bar: "bar" })
-    t.true(requestSpy.calledWith("put", "test/put/endpoint", { foo: "foo", bar: "bar" }));
+    client.put("test/put/endpoint", {foo: "foo", bar: "bar"});
+    t.true(requestSpy.calledWith("put", "test/put/endpoint", {foo: "foo", bar: "bar"}));
     Client.prototype._request.restore();
 });

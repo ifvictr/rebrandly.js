@@ -23,8 +23,8 @@
     },
     "homepage": "https://github.com/ifvictr/rebrandly#readme",
     "dependencies": {
-        "bluebird": "^3.5.0",
-        "request": "^2.82.0"
+        "bluebird": "^3.5.1",
+        "request": "^2.83.0"
     },
     "devDependencies": {
         "ava": "^0.22.0",
