@@ -21,14 +21,14 @@ class Script {
      * DELETE /v1/scripts/:id
      */
     delete(id) {
-        return this.client.delete("/scripts/" + id);
+        return this.client.delete(`/scripts/${id}`);
     }
 
     /**
      * GET /v1/scripts/:id
      */
     get(id) {
-        return this.client.get("/scripts/" + id);
+        return this.client.get(`/scripts/${id}`);
     }
 
     /**
@@ -42,7 +42,7 @@ class Script {
      * POST /v1/scripts/:id
      */
     update(id, params) {
-        return this.client.post("/scripts/" + id, params);
+        return this.client.post(`/scripts/${id}`, params);
     }
 }
 

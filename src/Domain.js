@@ -14,7 +14,7 @@ class Domain {
      * GET /v1/domains/:id
      */
     get(id) {
-        return this.client.get("/domains/" + id);
+        return this.client.get(`/domains/${id}`);
     }
 
     /**

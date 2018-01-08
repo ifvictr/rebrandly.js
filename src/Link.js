@@ -21,7 +21,7 @@ class Link {
      * DELETE /v1/links/:id
      */
     delete(id, params) {
-        return this.client.delete("/links/" + id, params);
+        return this.client.delete(`/links/${id}`, params);
     }
 
     /**
@@ -29,6 +29,13 @@ class Link {
      */
     get(id) {
         return this.client.get("/links/" + id);
+    }
+
+    /**
+     * GET /v1/links/:id/scripts
+     */
+    getScripts(id, params) {
+        return this.client.get(`/links/${id}/scripts`, params);
     }
 
     /**
@@ -42,7 +49,7 @@ class Link {
      * POST /v1/links/:id
      */
     update(id, params) {
-        return this.client.post("/links/" + id, params);
+        return this.client.post(`/links/${id}`, params);
     }
 }
 
