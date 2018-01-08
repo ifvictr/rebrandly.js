@@ -1,4 +1,4 @@
-# [rebrandly](https://npmjs.com/package/rebrandly)
+# [rebrandly.js](https://npmjs.com/package/rebrandly)
 A promise-based client for the Rebrandly API in Node.js.
 
 ## Installation
