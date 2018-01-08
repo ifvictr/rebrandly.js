@@ -21,14 +21,14 @@ class Tag {
      * DELETE /v1/tags/:id
      */
     delete(id) {
-        return this.client.delete("/tags/" + id);
+        return this.client.delete(`/tags/${id}`);
     }
 
     /**
      * GET /v1/tags/:id
      */
     get(id) {
-        return this.client.get("/tags/" + id);
+        return this.client.get(`/tags/${id}`);
     }
 
     /**
@@ -42,7 +42,7 @@ class Tag {
      * POST /v1/tags/:id
      */
     update(id, params) {
-        return this.client.post("/tags/" + id, params);
+        return this.client.post(`/tags/${id}`, params);
     }
 }
 

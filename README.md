@@ -1,12 +1,15 @@
 # [rebrandly.js](https://npmjs.com/package/rebrandly)
+
 A promise-based client for the Rebrandly API in Node.js.
 
 ## Installation
+
 ```
 npm install rebrandly --save
 ```
 
 ## Usage
+
 ```js
 const Rebrandly = require("rebrandly");
 const client = new Rebrandly("TOKEN");
@@ -20,7 +23,9 @@ client.links.list().then(res => {
 ```
 
 ## Methods
+
 Methods in this module wrap around the HTTP API specified here: https://developers.rebrandly.com
+
 - `rebrandly.account.get()`
 - `rebrandly.account.getTeams(params)`
 - `rebrandly.domains.count(params)`
@@ -30,6 +35,7 @@ Methods in this module wrap around the HTTP API specified here: https://develope
 - `rebrandly.links.create(params)`
 - `rebrandly.links.delete(id, params)`
 - `rebrandly.links.get(id)`
+- `rebrandly.links.getScripts(id, params)`
 - `rebrandly.links.list(params)`
 - `rebrandly.links.update(id, params)`
 - `rebrandly.scripts.count()`
@@ -46,4 +52,5 @@ Methods in this module wrap around the HTTP API specified here: https://develope
 - `rebrandly.tags.update(id, params)`
 
 ## License
+
 [MIT](LICENSE.txt)
