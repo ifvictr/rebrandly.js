@@ -8,7 +8,7 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/ifvictr/rebrandly.git"
+        "url": "git+https://github.com/ifvictr/rebrandly.js.git"
     },
     "keywords": [
         "api",
@@ -19,9 +19,9 @@
     "author": "Victor Truong <me@ifvictr.com> (https://ifvictr.com)",
     "license": "MIT",
     "bugs": {
-        "url": "https://github.com/ifvictr/rebrandly/issues"
+        "url": "https://github.com/ifvictr/rebrandly.js/issues"
     },
-    "homepage": "https://github.com/ifvictr/rebrandly#readme",
+    "homepage": "https://github.com/ifvictr/rebrandly.js#readme",
     "dependencies": {
         "bluebird": "^3.5.1",
         "request": "^2.83.0"
