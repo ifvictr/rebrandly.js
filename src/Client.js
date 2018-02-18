@@ -19,19 +19,19 @@ class Client {
     }
 
     delete(uri, data) {
-        return this._request("delete", uri, data);
+        return this._request("DELETE", uri, data);
     }
 
     get(uri, data) {
-        return this._request("get", uri, data);
+        return this._request("GET", uri, data);
     }
 
     post(uri, data) {
-        return this._request("post", uri, data);
+        return this._request("POST", uri, data);
     }
 
     put(uri, data) {
-        return this._request("put", uri, data);
+        return this._request("PUT", uri, data);
     }
 
     _request(method, uri, data = {}) {
