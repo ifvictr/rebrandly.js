@@ -16,6 +16,13 @@ class Account {
     getTeams(params) {
         return this.client.get("/account/teams", params);
     }
+
+    /**
+     * GET /v1/account/workspaces
+     */
+     getWorkspaces(params) {
+         return this.client.get("/account/workspaces", params);
+     }
 }
 
 module.exports = Account;
