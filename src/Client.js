@@ -1,5 +1,4 @@
-const Promise = require("bluebird");
-const request = Promise.promisify(require("request"));
+const axios = require("axios");
 
 const Account = require("./Account");
 const Domain = require("./Domain");
@@ -34,19 +33,18 @@ class Client {
         return this._request("PUT", uri, data);
     }
 
-    _request(method, uri, data = {}) {
-        return request({
-            uri: uri,
-            baseUrl: "https://api.rebrandly.com/v1/",
+    _request(method, uri, data) {
+        return axios({
             method: method,
+            baseURL: "https://api.rebrandly.com/v1/",
+            url: uri,
+            params: data,
             headers: {
                 apikey: this.apiKey
             },
-            qs: data,
-            body: data,
-            json: true
-        })
-            .then(res => res.body);
+            data: data,
+            responseType: "json"
+        }).then(({data}) => data);
     }
 }
 
