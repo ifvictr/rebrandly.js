@@ -11,7 +11,7 @@ class Link {
             query: [
                 "favourite",
                 "status",
-                "id"
+                "domain.id"
             ]
         });
     }
@@ -82,7 +82,7 @@ class Link {
     list(params) {
         return this.client.get("/links", params, {
             query: [
-                "id",
+                "domain.id",
                 "status",
                 "favourite",
                 "orderBy",
