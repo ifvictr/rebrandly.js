@@ -63,6 +63,20 @@ class Link {
     }
 
     /**
+     * GET /v1/links/:id/tags
+     */
+    getTags(id, params) {
+        return this.client.get(`/links/${id}/tags`, params, {
+            query: [
+                "orderDir",
+                "offset",
+                "limit",
+                "orderBy"
+            ]
+        });
+    }
+
+    /**
      * GET /v1/links
      */
     list(params) {
