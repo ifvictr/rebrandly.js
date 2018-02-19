@@ -28,6 +28,7 @@ Methods in this module wrap around the HTTP API specified here: https://develope
 
 - `rebrandly.account.get()`
 - `rebrandly.account.getTeams(params)`
+- `rebrandly.account.getWorkspaces(params)`
 - `rebrandly.domains.count(params)`
 - `rebrandly.domains.get(id)`
 - `rebrandly.domains.list(params)`
@@ -36,6 +37,7 @@ Methods in this module wrap around the HTTP API specified here: https://develope
 - `rebrandly.links.delete(id, params)`
 - `rebrandly.links.get(id)`
 - `rebrandly.links.getScripts(id, params)`
+- `rebrandly.links.getTags(id, params)`
 - `rebrandly.links.list(params)`
 - `rebrandly.links.update(id, params)`
 - `rebrandly.scripts.count()`
