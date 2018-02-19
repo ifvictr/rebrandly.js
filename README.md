@@ -28,7 +28,7 @@ client.links.list().then(res => {
 
 ## Methods
 
-Methods in this module wrap around the HTTP API specified here: https://developers.rebrandly.com
+Methods in this module wrap around the REST API specified here: https://developers.rebrandly.com
 
 - `rebrandly.account.get()`
 - `rebrandly.account.getTeams(params)`
