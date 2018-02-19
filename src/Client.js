@@ -8,8 +8,8 @@ const Script = require("./Script");
 const Tag = require("./Tag");
 
 class Client {
-    constructor(apiKey) {
-        this.apiKey = apiKey;
+    constructor(opts) {
+        this.opts = opts;
 
         this.account = new Account(this);
         this.domains = new Domain(this);
@@ -43,9 +43,7 @@ class Client {
             baseURL: "https://api.rebrandly.com/v1/",
             url: uri,
             params: pick(data, schema.query),
-            headers: {
-                apikey: this.apiKey
-            },
+            headers: this.opts,
             data: pick(data, schema.body),
             responseType: "json"
         })

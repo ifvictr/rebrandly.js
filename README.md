@@ -12,7 +12,11 @@ npm install rebrandly --save
 
 ```js
 const Rebrandly = require("rebrandly");
-const client = new Rebrandly("TOKEN");
+const client = new Rebrandly({
+    apikey: "API_KEY_HERE",
+    // `workspace` is optional
+    workspace: "WORKSPACE_HERE"
+});
 
 // Output all shortlinks and the destinations they point to
 client.links.list().then(res => {
