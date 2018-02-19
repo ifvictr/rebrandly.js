@@ -1,4 +1,5 @@
 const axios = require("axios");
+const pick = require("object.pick");
 
 const Account = require("./Account");
 const Domain = require("./Domain");
@@ -17,34 +18,39 @@ class Client {
         this.tags = new Tag(this);
     }
 
-    delete(uri, data) {
-        return this._request("DELETE", uri, data);
+    delete(uri, data, schema) {
+        return this._request("DELETE", uri, data, schema);
     }
 
-    get(uri, data) {
-        return this._request("GET", uri, data);
+    get(uri, data, schema) {
+        return this._request("GET", uri, data, schema);
     }
 
-    post(uri, data) {
-        return this._request("POST", uri, data);
+    post(uri, data, schema) {
+        return this._request("POST", uri, data, schema);
     }
 
-    put(uri, data) {
-        return this._request("PUT", uri, data);
+    put(uri, data, schema) {
+        return this._request("PUT", uri, data, schema);
     }
 
-    _request(method, uri, data) {
+    _request(method, uri, data, schema) {
+        schema.query = schema.query || [];
+        schema.body = schema.body || [];
+
         return axios({
             method: method,
             baseURL: "https://api.rebrandly.com/v1/",
             url: uri,
-            params: data,
+            params: pick(data, schema.query),
             headers: {
                 apikey: this.apiKey
             },
-            data: data,
+            data: pick(data, schema.body),
             responseType: "json"
-        }).then(({data}) => data);
+        })
+            .then(res => res.data)
+            .catch(res => res.response.data);
     }
 }
 

@@ -14,7 +14,12 @@ class Script {
      * POST /v1/scripts
      */
     create(params) {
-        return this.client.post("/scripts", params);
+        return this.client.post("/scripts", params, {
+            body: [
+                "name",
+                "value"
+            ]
+        });
     }
 
     /**
@@ -35,14 +40,26 @@ class Script {
      * GET /v1/scripts
      */
     list(params) {
-        return this.client.get("/scripts", params);
+        return this.client.get("/scripts", params, {
+            query: [
+                "orderBy",
+                "orderDir",
+                "offset",
+                "limit"
+            ]
+        });
     }
 
     /**
      * POST /v1/scripts/:id
      */
     update(id, params) {
-        return this.client.post(`/scripts/${id}`, params);
+        return this.client.post(`/scripts/${id}`, params, {
+            body: [
+                "name",
+                "value"
+            ]
+        });
     }
 }
 

@@ -14,7 +14,12 @@ class Tag {
      * POST /v1/tags
      */
     create(params) {
-        return this.client.post("/tags", params);
+        return this.client.post("/tags", params, {
+            body: [
+                "name",
+                "color"
+            ]
+        });
     }
 
     /**
@@ -35,14 +40,26 @@ class Tag {
      * GET /v1/tags
      */
     list(params) {
-        return this.client.get("/tags", params);
+        return this.client.get("/tags", params, {
+            query: [
+                "orderBy",
+                "orderDir",
+                "offset",
+                "limit"
+            ]
+        });
     }
 
     /**
      * POST /v1/tags/:id
      */
     update(id, params) {
-        return this.client.post(`/tags/${id}`, params);
+        return this.client.post(`/tags/${id}`, params, {
+            body: [
+                "name",
+                "color"
+            ]
+        });
     }
 }
 
