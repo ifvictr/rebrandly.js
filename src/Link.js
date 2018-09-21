@@ -88,7 +88,8 @@ class Link {
                 "orderBy",
                 "orderDir",
                 "offset",
-                "limit"
+                "limit",
+                "last"
             ]
         });
     }
